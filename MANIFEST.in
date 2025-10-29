@@ -1,0 +1,36 @@
+# DeepScale
+
+A Python library for large-scale deep learning training across thousands of GPUs, designed for training massive models like Large Language Models (LLMs) and other billion-parameter architectures.
+
+## Quick Start
+
+```bash
+pip install deepscale
+```
+
+```python
+from deepscale import DistributedTrainer, LLMTrainer
+
+# Train across thousands of GPUs
+trainer = DistributedTrainer(model, num_gpus=1000)
+effective_batch_size = trainer.calculate_effective_batch_size()
+
+# LLM training at scale
+llm_trainer = LLMTrainer(model_size="70B", num_gpus=2048)
+```
+
+## Features
+
+- **Massive Scale Training**: Support for training across thousands of GPUs
+- **LLM Training**: Specialized utilities for Large Language Model training
+- **Distributed Training**: Advanced distributed training strategies
+- **Model Parallelism**: Pipeline and tensor parallelism for massive models
+- **Memory Optimization**: Techniques for training billion-parameter models
+
+## Documentation
+
+See [README.md](README.md) for full documentation.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
