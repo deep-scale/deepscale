@@ -28,7 +28,18 @@ classifiers = [
 ]
 dependencies = [
     "numpy>=1.21.0",
+    "tqdm>=4.62.0",
+    "psutil>=5.8.0",
+    "rich>=10.0.0",
+    "pyyaml>=5.4.0",
+    "tensorboard>=2.8.0",
+    "nvidia-ml-py3>=7.352.0",
+    "deepspeed>=0.9.0",
+    # Note: For CUDA 12.4 support, install PyTorch from wheel index:
+    # pip install --upgrade --index-url https://download.pytorch.org/whl/cu124 torch torchvision torchaudio
     "torch>=1.9.0",
+    "torchvision>=0.10.0",
+    "torchaudio>=0.9.0",
 ]
 
 [project.optional-dependencies]
@@ -38,6 +49,12 @@ dev = [
     "black",
     "flake8",
     "mypy",
+]
+perf = [
+    # Optional but useful for performance optimization
+    "packaging>=21.0",
+    "ninja>=1.10.0",
+    "triton>=2.0.0",
 ]
 
 [project.urls]

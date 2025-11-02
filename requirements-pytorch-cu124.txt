@@ -1,0 +1,7 @@
+# PyTorch installation with CUDA 12.4 support
+# Install with: pip install -r requirements-pytorch-cu124.txt
+--index-url https://download.pytorch.org/whl/cu124
+torch
+torchvision
+torchaudio
+
